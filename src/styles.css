@@ -1,3 +1,8 @@
+body {
+  background-color: #192229;
+  color: #fff;
+}
+
 .main-container {
   margin-top: 40px;
   margin-bottom: 150px;
@@ -12,15 +17,17 @@
   width: 300px;
   height: 400px;
   overflow: hidden;
-  border: 1px solid #4080ff;
-  border-radius: 20px;
+  border: 1px solid #4ad295;
+  background-color: #212e36;
+  border-radius: 10px;
 }
 
 .app-messages {
   overflow-y: scroll;
   height: 270px;
-  /*background:gray;*/
   padding: 5px;
+  background-color: #2a3b47;
+  border-radius: 5px;
 }
 
 /* Animaciones */
