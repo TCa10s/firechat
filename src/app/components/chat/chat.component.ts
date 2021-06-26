@@ -31,9 +31,7 @@ export class ChatComponent implements OnInit {
   sendMessage() {
     console.log(this.message);
 
-    if (this.message.length === 0) {
-      return;
-    }
+    if (this.message.length === 0) { return; }
     this._cs
       .addMessage(this.message)
       .then(() => {
