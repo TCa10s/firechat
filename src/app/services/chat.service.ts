@@ -17,19 +17,14 @@ export class ChatService {
   private itemsCollection: AngularFirestoreCollection<Message>; // Leer una colección en particular.
   public chats: Message[] = [];
   public user: any = {};
-  public loader: boolean = true;
   public loaderMsg: boolean = true;
 
   constructor(private afs: AngularFirestore, private auth: AngularFireAuth) {
     this.auth.authState.subscribe((user) => {
       if (!user) return;
 
-      setTimeout(() => {
-        this.user.name = user.displayName;
-        this.user.uid = user.uid;
-        this.loader = false;
-      }, 500);
-
+      this.user.name = user.displayName;
+      this.user.uid = user.uid;
     });
   }
 
@@ -44,6 +39,7 @@ export class ChatService {
         map((messages: Message[]) => {
           this.chats = messages;
           this.loaderMsg = false;
+          console.log(this.loaderMsg);
         })
       );
   }

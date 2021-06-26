@@ -18,18 +18,6 @@
   </div>
 
   <div class="d-flex justify-content-center mt-5">
-    <div class="item" *ngIf="_cs.loader">
-      <ngx-skeleton-loader
-        count="1"
-        appearance="line"
-        [theme]="{
-          'background-color': '#2A3B47',
-          width: '350px',
-          height: '400px'
-        }"
-      ></ngx-skeleton-loader>
-    </div>
-
     <div
       class="chat-window animate__animated animate__fadeIn"
       *ngIf="_cs.user.uid"
@@ -38,5 +26,5 @@
     </div>
   </div>
 
-  <app-login *ngIf="!_cs.user.uid && !_cs.loader"></app-login>
+  <app-login *ngIf="!_cs.user.uid"></app-login>
 </div>
