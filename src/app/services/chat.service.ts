@@ -25,6 +25,7 @@ export class ChatService {
       if(!user){return};
 
       this.user.name = user.displayName;
+      console.log(this.user.name)
       this.user.uid = user.uid;
     });
   }

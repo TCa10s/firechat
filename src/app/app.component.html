@@ -1,20 +1,25 @@
 <div class="container main-container">
-
-    <div class="d-flex align-items-center justify-content-between">
-        <h1>Firechat</h1>
-    
-        <div *ngIf="_cs.user.uid">
-            <button type="button" class="btn btn-outline-danger" (click)="_cs.logout()">
-                LogOut
-            </button>
-        </div>
+  <div class="d-flex align-items-center justify-content-between">
+    <div>
+      <h1>Firechat</h1>
+      <span *ngIf="_cs.user.uid">Bienvenido {{ _cs.user.name }}</span>
     </div>
-
-    <div class="d-flex justify-content-center mt-5">
-        <div class="chat-window" *ngIf="_cs.user.uid">
-            <app-chat></app-chat>
-        </div>
+    <div *ngIf="_cs.user.uid">
+      <button
+        type="button"
+        class="btn btn-outline-danger"
+        (click)="_cs.logout()"
+      >
+        LogOut
+      </button>
     </div>
+  </div>
 
-    <app-login *ngIf="!_cs.user.uid"></app-login>
+  <div class="d-flex justify-content-center mt-5">
+    <div class="chat-window" *ngIf="_cs.user.uid">
+      <app-chat></app-chat>
+    </div>
+  </div>
+
+  <app-login *ngIf="!_cs.user.uid"></app-login>
 </div>
