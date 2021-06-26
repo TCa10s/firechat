@@ -1,27 +1,56 @@
-# Firechat
+<h1 align="center">Fire-chat</h1>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.11.
+<div align="center">
+  <h3>
+    <a href="https://fire-chat-app.netlify.app/">
+      Demo
+    </a>
+  </h3>
+</div>
 
-## Development server
+## Overview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+![screenshot](https://raw.githubusercontent.com/TCar10s/firechat/main/src/assets/img/screenshot-desktop.png?token=AHUEIBLGDQH6GWTUCYTVPI3A25RTS)
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Notas
 
-## Build
+Recuerden reconstruir los módulos de Node.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+npm install
+```
 
-## Running unit tests
+Debes proporcionar tus credenciales de firebase en el archivo enviroments.ts
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+export const environment = {
+  production: false,
+  firebase: {
+    apiKey: '',
+    authDomain: '',
+    projectId: '',
+    storageBucket: '',
+    messagingSenderId: '',
+    appId: '',
+    measurementId: '',
+  },
+```
 
-## Running end-to-end tests
+Para correr el proyecto:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+ng serve
+```
 
-## Further help
+Si quieres generar el build usa:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+ng build --prod
+```
+
+## Contact
+
+- Website [www.tutoscarlos.xyz](https://www.tutoscarlos.xyz)
+- GitHub [@TCar10s](https://https://github.com/TCar10s)
+- Twitter [@Tutos_Carlos11](https://twitter.com/Tutos_Carlos11)
