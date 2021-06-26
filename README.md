@@ -21,12 +21,6 @@ Recuerden reconstruir los módulos de Node.
 npm install
 ```
 
-Para reconstruir el build, recuerden:
-
-```
-ng build --prod
-```
-
 Debes proporcionar tus credenciales de firebase en el archivo enviroments.ts
 
 ```
@@ -43,10 +37,16 @@ export const environment = {
   },
 ```
 
-Y por último:
+Para correr el proyecto:
 
 ```
 ng serve
+```
+
+Si quieres generar el build usa:
+
+```
+ng build --prod
 ```
 
 ## Contact
