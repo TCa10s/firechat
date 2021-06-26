@@ -10,7 +10,7 @@
 
 ## Overview
 
-![screenshot](https://raw.githubusercontent.com/TCar10s/firechat/main/src/assets/img/screenshot-desktop.png?token=AHUEIBLGDQH6GWTUCYTVPI3A25RTS)
+![screenshot](https://raw.githubusercontent.com/TCar10s/firechat/main/src/assets/img/screenshot-desktop.png)
 
 
 ## Notas
