@@ -14,20 +14,22 @@ body {
 
 .chat-window {
   padding: 10px;
-  width: 300px;
-  height: 400px;
+  width: 350px;
   overflow: hidden;
-  border: 1px solid #4ad295;
   background-color: #212e36;
   border-radius: 10px;
 }
 
 .app-messages {
-  overflow-y: scroll;
+  overflow-y: auto;
   height: 270px;
   padding: 5px;
   background-color: #2a3b47;
   border-radius: 5px;
+
+  /* Propiedades extras para que los esilos del scroll se apliquen en firefox */
+  scrollbar-color: rgba(165, 165, 165, 0.651);
+  scrollbar-width: thin;
 }
 
 /* Animaciones */
@@ -57,4 +59,36 @@ body {
 
 .fadeIn {
   animation-name: fadeIn;
+}
+
+/* Estilos para motores Webkit y blink (Chrome, Safari, Opera... )*/
+
+.app-messages::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.app-messages::-webkit-scrollbar:vertical {
+  width: 10px;
+}
+
+.app-messages::-webkit-scrollbar-button:increment,
+.app-messages::-webkit-scrollbar-button {
+  display: none;
+}
+
+.app-messages::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+.app-messages::-webkit-scrollbar-thumb {
+  background-color: rgba(165, 165, 165, 0.651);
+  border-radius: 20px;
+}
+
+.app-messages::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+.prueba {
+  background-color:red
 }
