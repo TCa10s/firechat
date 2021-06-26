@@ -24,8 +24,10 @@ body {
   overflow-y: auto;
   height: 270px;
   padding: 5px;
+  background-color: #374c5c;
   background-color: #2a3b47;
   border-radius: 5px;
+  padding: 10px;
 
   /* Propiedades extras para que los esilos del scroll se apliquen en firefox */
   scrollbar-color: rgba(165, 165, 165, 0.651);
@@ -87,8 +89,4 @@ body {
 
 .app-messages::-webkit-scrollbar-track {
   border-radius: 10px;
-}
-
-.prueba {
-  background-color:red
 }

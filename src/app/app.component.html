@@ -1,10 +1,12 @@
 <div class="container main-container">
   <div class="d-flex align-items-center justify-content-between">
-    <div>
+    <div class="animate__animated animate__fadeIn">
       <h1>Firechat</h1>
-      <span *ngIf="_cs.user.uid">Bienvenido {{ _cs.user.name }}</span>
+      <span class="animate__animated animate__fadeIn" *ngIf="_cs.user.uid"
+        >Bienvenido {{ _cs.user.name }}</span
+      >
     </div>
-    <div *ngIf="_cs.user.uid">
+    <div class="animate__animated animate__fadeIn" *ngIf="_cs.user.uid">
       <button
         type="button"
         class="btn btn-outline-danger"
@@ -16,10 +18,25 @@
   </div>
 
   <div class="d-flex justify-content-center mt-5">
-    <div class="chat-window" *ngIf="_cs.user.uid">
+    <div class="item" *ngIf="_cs.loader">
+      <ngx-skeleton-loader
+        count="1"
+        appearance="line"
+        [theme]="{
+          'background-color': '#2A3B47',
+          width: '350px',
+          height: '400px'
+        }"
+      ></ngx-skeleton-loader>
+    </div>
+
+    <div
+      class="chat-window animate__animated animate__fadeIn"
+      *ngIf="_cs.user.uid"
+    >
       <app-chat></app-chat>
     </div>
   </div>
 
-  <app-login *ngIf="!_cs.user.uid"></app-login>
+  <app-login *ngIf="!_cs.user.uid && !_cs.loader"></app-login>
 </div>

@@ -12,6 +12,8 @@ import { environment } from '../environments/environment';
 import { ChatComponent } from './components/chat/chat.component';
 import { LoginComponent } from './components/login/login.component';
 
+// Skeleton loader
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,8 @@ import { LoginComponent } from './components/login/login.component';
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
-    FormsModule 
+    FormsModule,
+    NgxSkeletonLoaderModule.forRoot({ animation: 'pulse'}),
   ],
   providers: [],
   bootstrap: [AppComponent]
